@@ -27,10 +27,10 @@ function initializeClock(id, endtime) {
     function updateClock() {
         var t = getTimeRemaining(endtime);
         if (t.total === 0) {
-            audio.play();
+            // audio.play();
             modal.style.display = "block";
         }
-        if(t.total < (30 * 1000)){
+        if(t.total < (11 * 1000)){
             clockDiv.style.color = "red"
             tick.play();
         }
@@ -51,7 +51,7 @@ function initializeClock(id, endtime) {
 
 function startClock() {
 
-    var time = prompt("Time (HH:MM) : ","00:05:00");
+    var time = prompt("Time (HH:MM) : ","00:04:00");
     var hour = time.split(":")[0];
     var min = time.split(":")[1];
     var sec = time.split(":")[2];
